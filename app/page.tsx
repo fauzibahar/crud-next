@@ -1,18 +1,11 @@
-"use client";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <div className="flex justify-center bg-teal-600 min-h-screen items-center">
-      <button
-        type="button"
-        className="rounded-lg border text-xl p-2 bg-white hover:drop-shadow-2xl text-teal-600"
-        onClick={() => router.push("/contacts")}
-      >
+      <Link href="/contacts" className="rounded-lg border text-xl p-2 bg-white hover:bg-gray-100 text-teal-600">
         Get Started
-      </button>
+      </Link>
     </div>
   );
 }
